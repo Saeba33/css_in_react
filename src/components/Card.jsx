@@ -1,7 +1,8 @@
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import { useState } from "react";
 
-function Card({ perso, nickname, cat, imgPerso, descriptionPerso, puissance, isFavorite }) {
+function Card({ name, nickname, category, picture, bio, power, isFavorite }) {
    const [favorite, setFavorite] = useState(isFavorite);
    const handleClickFavorite = () => {
    setFavorite(!favorite);
@@ -10,47 +11,47 @@ function Card({ perso, nickname, cat, imgPerso, descriptionPerso, puissance, isF
 
 const CardContainer = styled.div`
 border: 2px solid white;
+width: 30vw;
 margin: 20px;
-`
+border-radius: 15px;
+`;
 
-const Character = styled.h1`
+const Name = styled.h1``;
 
-`
+const Nickname = styled.h4``;
 
-const Alias = styled.h3`
-
-`
-
-const Category = styled.h3`
-
-`
+const Category = styled.h4`
+text-align: left;
+padding-left: 80px;
+`;
 
 const Picture = styled.img`
 width: 100%;
-`
+`;
 
 const Bio = styled.p`
-
-`
+text-align: left;
+padding: 0px 20px;
+`;
 
 const Power = styled.h2`
 
-`
+`;
 
 const Fav = styled.p`
 
-`
+`;
 
 
 return (
     <>
      <CardContainer>
-      <Character>{perso}</Character>
-      <Alias>{nickname}</Alias>
-      <Category>{cat}</Category>
-      <Picture src={imgPerso} alt="photo"></Picture>
-      <Bio>{descriptionPerso}</Bio>
-      <Power>{puissance}</Power>
+      <Name>{name}</Name>
+      <Nickname>" {nickname} "</Nickname>
+      <Picture src={picture} alt="photo"></Picture>
+      <Category>{category}</Category>
+      <Bio>{bio}</Bio>
+      <Power>{power}</Power>
      
       <Fav
       id="favorite"
@@ -62,5 +63,15 @@ return (
     </>
   );
 }
+
+Card.propTypes = {
+    name: PropTypes.string,
+    nickname: PropTypes.string,
+    category: PropTypes.string,
+    picture: PropTypes.string,
+    bio: PropTypes.string,
+    power: PropTypes.number,
+    isFavorite: PropTypes.bool,
+  };
 
 export default Card;

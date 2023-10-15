@@ -1,7 +1,5 @@
-import styled from "styled-components";
 import Data from "./Data";
 import Card from "./Card";
-
 
 const CardList = () => {
   return (
@@ -9,17 +7,17 @@ const CardList = () => {
       {Data.map((item, index) => (
         <Card
           key={index}
-          perso={item.perso}
+          name={item.name}
           nickname={item.nickname}
-          cat={item.cat}
-          imgPerso={item.imgPerso}
-          descriptionPerso={item.descriptionPerso}
-          puissance={item.puissance}
+          category={item.category}
+          picture={item.picture}
+          bio={item.bio}
+          power={item.power}
           isFavorite={item.isFavorite}
         />
       ))}
     </>
   );
-};
+}
 
 export default CardList;
