@@ -2,4 +2,4 @@ I chose Styled Components beacause is more popular than emotion since the early 
 
 ---
 
-Subject of my card : jjk theme
+Subject of my cards : jjk theme

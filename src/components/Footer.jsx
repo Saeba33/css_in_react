@@ -1,15 +1,16 @@
 import styled from "styled-components";
 
+
 const Logo = styled.img`
-  width: 60%;
-  height: auto;
-  margin-top: calc(20px + 5vw);
-  opacity: 0;
-   &:hover {
+width: 60%;
+height: auto;
+margin-top: calc(20px + 5vw);
+opacity: 0;
+  &:hover {
    opacity: 1;
    transform: scale(1.2);
    transition: 0.4s cubic-bezier(0.45, 0.05, 0.55, 0.95);
-   }
+  }
 `;
 
 const Line = styled.div`
@@ -30,14 +31,16 @@ margin: 30px;
 opacity: 0.8;
 `;
 
+
 const Footer = () => {
-  return (
-    <>
-      <Logo src="./src/assets/Murasaki.gif" alt="logo"></Logo>
-      <Line></Line>
-      <Copyrights>&copy; Saeba12</Copyrights>
-    </>
-  );
+return (
+  <>
+    <Logo src="./src/assets/img/Murasaki.gif" alt="logo"></Logo>
+    <Line></Line>
+    <Copyrights>&copy; Saeba12</Copyrights>
+  </>
+ );
 };
+
 
 export default Footer;

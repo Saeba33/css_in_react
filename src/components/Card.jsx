@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { useState } from "react";
 
+
 const CardContainer = styled.div`
 border: 2px solid white;
 width: 320px;
@@ -11,12 +12,11 @@ background-color: transparent;
 display: grid;
 grid-template-rows: auto auto auto 1fr auto auto auto ;
 opacity: 0.6;
-
-&:hover {
-    background-color: #656674;
-    opacity: 1;
-    transform: scale(1.05);
-}
+ &:hover {
+  background-color: #656674;
+  opacity: 1;
+  transform: scale(1.05);
+ }
 `;
 
 const Name = styled.h1`
@@ -71,43 +71,45 @@ margin-bottom: 10px;
 margin-left: 20px;
 `;
 
+
 function Card({ name, nickname, picture, category, power, bio, isFavorite }) {
-    const [favorite, setFavorite] = useState(isFavorite);
-    const handleClickFavorite = () => {
-    setFavorite(!favorite);
- };
- 
+  const [favorite, setFavorite] = useState(isFavorite);
+  const handleClickFavorite = () => {
+  setFavorite(!favorite);
+};
 
 return (
-    <CardContainer>
-      <Name>{name}</Name>
-      <Nickname>" {nickname} "</Nickname>
-      <Picture src={picture} alt="photo"></Picture>
-      <Content>
-      <UnderPicture>
-      <Category>{category}</Category>
-      <Power>{power}</Power>
-      </UnderPicture>
-      <Bio>{bio}</Bio>
-      </Content>
-      <Fav
+  <CardContainer>
+    <Name>{name}</Name>
+    <Nickname>" {nickname} "</Nickname>
+    <Picture src={picture} alt="photo"></Picture>
+    <Content>
+    <UnderPicture>
+    <Category>{category}</Category>
+    <Power>{power}</Power>
+    </UnderPicture>
+    <Bio>{bio}</Bio>
+    </Content>
+    <Fav
       id="favorite"
       onClick={handleClickFavorite}
       className={favorite ? 'isFavorite' : 'notFavorite'}
       >
-      </Fav>
-    </CardContainer>
-  );
+    </Fav>
+  </CardContainer>
+ );
 }
 
+
 Card.propTypes = {
-    name: PropTypes.string,
-    nickname: PropTypes.string,
-    picture: PropTypes.string,
-    category: PropTypes.string,
-    power: PropTypes.string,
-    bio: PropTypes.string,
-    isFavorite: PropTypes.bool,
-  };
+  name: PropTypes.string,
+  nickname: PropTypes.string,
+  picture: PropTypes.string,
+  category: PropTypes.string,
+  power: PropTypes.string,
+  bio: PropTypes.string,
+  isFavorite: PropTypes.bool,
+};
+
 
 export default Card;
