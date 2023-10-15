@@ -4,23 +4,29 @@ import { useState } from "react";
 
 const CardContainer = styled.div`
 border: 2px solid white;
-width: 30vw;
+width: 320px;
 margin: 20px;
 border-radius: 15px;
 background-color: transparent;
 display: grid;
 grid-template-rows: auto auto auto 1fr auto auto auto ;
-grid-gap:10px;
+opacity: 0.6;
+
+&:hover {
+    background-color: #656674;
+    opacity: 1;
+    transform: scale(1.05);
+}
 `;
 
 const Name = styled.h1`
+padding: 10px;
 grid-row: 1;
-margin-bottom: 0;
 `;
 
-const Nickname = styled.h5`
+const Nickname = styled.h4`
 font-style: italic;
-font-weight: regular;
+padding-bottom: 20px;
 grid-row: 2;
 `;
 
@@ -28,19 +34,19 @@ const Picture = styled.img`
 width: 100%;
 height: 300px;
 object-fit: cover;
+padding-bottom: 20px;
 grid-row: 3;
-`;
-
-
-const UnderPicture = styled.div`
-display: flex;
-justify-content: space-between;
-margin-bottom: 10px;
 `;
 
 const Content = styled.div`
 display: flex;
 flex-direction: column;
+`;
+
+const UnderPicture = styled.div`
+display: flex;
+justify-content: space-between;
+padding-bottom: 20px;
 `;
 
 const Category = styled.h4`
@@ -61,11 +67,11 @@ padding: 0px 20px;
 
 const Fav = styled.button`
 background-color: transparent;
-margin-bottom: 5px;
-grid-row: 7;
+margin-bottom: 10px;
+margin-left: 20px;
 `;
 
-function Card({ name, nickname, picture,category, power, bio, isFavorite }) {
+function Card({ name, nickname, picture, category, power, bio, isFavorite }) {
     const [favorite, setFavorite] = useState(isFavorite);
     const handleClickFavorite = () => {
     setFavorite(!favorite);

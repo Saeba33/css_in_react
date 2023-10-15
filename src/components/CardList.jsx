@@ -3,9 +3,10 @@ import Data from "./Data";
 import Card from "./Card";
 
 const CardListContainer = styled.div`
+width: 100%;
 display: flex;
 flex-wrap: wrap;
-justify-content: space between;
+justify-content: center;
 `;
 
 const CardList = () => {
