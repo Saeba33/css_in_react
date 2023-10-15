@@ -7,53 +7,60 @@ function Card({ perso, nickname, cat, imgPerso, descriptionPerso, puissance, isF
    setFavorite(!favorite);
 };
 
-/*const Container = styled.div`
+
+const CardContainer = styled.div`
+border: 2px solid white;
+margin: 20px;
 `
 
-const Perso = styled.h3`
+const Character = styled.h1`
+
 `
 
-const Nickname = styled.h5`
+const Alias = styled.h3`
+
 `
 
-const cat = styled.p`
+const Category = styled.h3`
+
 `
 
-const ImgPerso = styled.image`
+const Picture = styled.img`
+width: 100%;
 `
 
-const DescriptionPerso = styled.p`
+const Bio = styled.p`
+
 `
 
-const Puissance = styled.h6`
-`*/
+const Power = styled.h2`
+
+`
+
+const Fav = styled.p`
+
+`
+
 
 return (
-    <div className="itemContainer">
-      <div className="leftContainer">
-        <div className="imgContainer">
-      
-        </div>
-        <div className="itemDescription">
-         
-          <h3>{perso}</h3>
-          <h5>{nickname}</h5>
-          <p>{cat}</p>
-          <img src={imgPerso} alt="image" />
-          <p>{descriptionPerso}</p>
-          <h6>{puissance}</h6>
-        </div>
-      </div>
-      <div className="rightContainer">
-  
-         <div
-          id="favorite"
-          onClick={handleClickFavorite}
-          className={favorite ? 'isFavorite' : 'notFavorite'}
-        ></div>
-      </div>
-    </div>
+    <>
+     <CardContainer>
+      <Character>{perso}</Character>
+      <Alias>{nickname}</Alias>
+      <Category>{cat}</Category>
+      <Picture src={imgPerso} alt="photo"></Picture>
+      <Bio>{descriptionPerso}</Bio>
+      <Power>{puissance}</Power>
+     
+      <Fav
+      id="favorite"
+      onClick={handleClickFavorite}
+      className={favorite ? 'isFavorite' : 'notFavorite'}
+      >
+      </Fav>
+     </CardContainer>
+    </>
   );
-};
+}
 
 export default Card;
