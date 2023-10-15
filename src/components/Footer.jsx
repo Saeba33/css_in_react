@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Line = styled.div`
-height: 7px;
+height: 5px;
 border: none;
 border-radius:50%;
 margin: 100px 10% 0 10%;
