@@ -12,11 +12,11 @@ const Title = styled.h1`
 `;
 
 const Subtitle = styled.h2`
-  font-size: calc(0.5em + 3vw);
+  font-size: calc(0.5em + 1.5vw);
   color: #8d078d;
   transition: 0.4s cubic-bezier(0.45, 0.05, 0.55, 0.95);
     &:hover {
-     transform: scale(1.4);
+     transform: scale(1.2);
     }
 `;
 

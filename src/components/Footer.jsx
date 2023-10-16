@@ -25,6 +25,7 @@ background: linear-gradient(90deg, rgba(160,6,201,1) 0%, rgba(121,9,81,1) 50%, r
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a006c9",endColorstr="#a006c9",GradientType=1);
 `;
 
+
 const Copyrights = styled.p`
 text-align: center;
 margin: 30px;
