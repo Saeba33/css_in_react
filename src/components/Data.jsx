@@ -62,7 +62,8 @@ const Data = [
   {
     name: `Geto Suguru`,
     nickname: `Saiaku no Juso-shi`,
-    picture: "CSS_IN_REACT/src/assets/img/Geto.jpg",
+    picture:
+      "https://github.com/Saeba33/css_in_react/blob/main/src/assets/img/Geto.jpg",
     category: `Catégorie : Vilain`,
     power: `Puissance : 85`,
     bio: `Un exorciste de classe spécial et un ancien camarade de classe de Satoru et Shoko, et donc un ancien élève de Yaga. Après qu'il ait estimé qu'aider les non-exorcistes n'était plus une option viable suite à divers événements, les idéaux de Suguru ont radicalement changés et ce dernier a quitté l'institut d'exorcisme après avoir massacré une centaine de civils en une seule nuit y compris ses parents. Il est alors devenu un maître des fléaux poursuivant l'objectif de créer un monde sans non-exorcistes. Son pouvoir occulte lui permet d'absorber et de contrôler les fléaux et de les utiliser pour le combat.`,
