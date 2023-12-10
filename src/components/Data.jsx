@@ -52,7 +52,7 @@ const Data = [
   {
     name: `Mahito`,
     nickname: `Le Rapiécé`,
-    picture: ".CSS_IN_REACT/src/assets/img/Mahito.jpg",
+    picture: "../src/assets/img/Mahito.jpg",
     category: `Catégorie : Vilain`,
     power: `Puissance : 80`,
     bio: `Fléau de haut-niveau né de la haine des humains, il est capable de prendre forme humaine, son but est l'extermination de l'humanité. Il est sadique, immature et aime jouer avec les émotions humaines, même lorsque sa vie est en danger. Il croit que la vie n'a aucune valeur ni de sens et donc chacun devrait en faire ce qu'il veut. Cette mentalité semble lui provenir de sa capacité à percevoir et à manipuler les âmes, ce qui lui fait voir cette dernière (et par extension le cœur) comme rien de plus qu'un objet. Son pouvoir occulte lui permet de manipuler son âme et celles des autres en changeant la forme de son corps et celui des autres.`,
