@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import styled from "styled-components";
 import { useState } from "react";
 
@@ -31,7 +32,7 @@ const Description1 = styled.article`
 const More = styled.button`
   background-color: transparent;
   color: white;
-  font-size: calc(1em + 1vw);
+  font-size: calc(1rem + 0.5vw);
   border: 0;
   cursor: pointer;
   position: relative;

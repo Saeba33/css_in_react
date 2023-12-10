@@ -79,7 +79,7 @@ function Card({ name, nickname, picture, category, power, bio, isFavorite }) {
   return (
     <CardContainer>
       <Name>{name}</Name>
-      <Nickname>"{nickname}"</Nickname>
+      <Nickname>{nickname}</Nickname>
       <Picture src={picture} alt="photo"></Picture>
       <Content>
         <UnderPicture>
@@ -100,7 +100,7 @@ function Card({ name, nickname, picture, category, power, bio, isFavorite }) {
 Card.propTypes = {
   name: PropTypes.string,
   nickname: PropTypes.string,
-  picture: PropTypes.string,
+  picture: PropTypes.object,
   category: PropTypes.string,
   power: PropTypes.string,
   bio: PropTypes.string,
